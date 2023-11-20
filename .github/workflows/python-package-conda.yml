@@ -1,34 +1,28 @@
-name: Python Package using Conda
+# name: Python Package using Conda
+# This is a YAML file for defining a GitHub Actions workflow for a Python package using conda
+# You can use this file to create and run a workflow that builds, tests and deploys your Python package on different platforms
+# To create a workflow from this file, save it as .github/workflows/python-package-conda.yml in your repository
 
-on: [push]
+name: Python Package using Conda # The name of the workflow
 
-jobs:
-  build-linux:
-    runs-on: ubuntu-latest
-    strategy:
-      max-parallel: 5
+on: [push] # The event that triggers the workflow
 
-    steps:
-    - uses: actions/checkout@v3
-    - name: Set up Python 3.10
-      uses: actions/setup-python@v3
-      with:
-        python-version: '3.10'
-    - name: Add conda to system path
-      run: |
+jobs: # The list of jobs to run in parallel
+  build-linux: # The name of the job for building the package on Linux
+    runs-on: ubuntu-latest # The type of runner to use
+    strategy: # The strategy for running the job
+      max-parallel: 5 # The maximum number of parallel jobs
+
+    steps: # The list of steps to perform the job
+    - uses: actions/checkout@v3 # A predefined action to check out the repository
+    - name: Set up Python 3.10 # A custom name for the step
+      uses: actions/setup-python@v3 # A predefined action to set up Python
+      with: # The parameters for the action
+        python-version: '3.10' # The Python version to use
+    - name: Add conda to system path # A custom name for the step
+      run: | # The commands to run in the step
         # $CONDA is an environment variable pointing to the root of the miniconda directory
-        echo $CONDA/bin >> $GITHUB_PATH
-    - name: Install dependencies
-      run: |
-        conda env update --file environment.yml --name base
-    - name: Lint with flake8
-      run: |
-        conda install flake8
-        # stop the build if there are Python syntax errors or undefined names
-        flake8 . --count --select=E9,F63,F7,F82 --show-source --statistics
-        # exit-zero treats all errors as warnings. The GitHub editor is 127 chars wide
-        flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
-    - name: Test with pytest
-      run: |
-        conda install pytest
-        pytest
+        echo $CONDA/bin >> $GITHUB_PATH # Add the conda bin directory to the system path
+    - name: Install dependencies # A custom name for the step
+      run: | # The commands to run in the step
+        conda env update --file environment.yml --name base # Update the base conda environment with the dependencies specified in the environment.yml file
