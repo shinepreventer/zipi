@@ -1,0 +1,2 @@
+ID	Domain	Kingdom	Phylum	Class	Order	Family	Genus	Species	mean	Label
+4ef5af3746dc7a02412ec0fc9396e6ba	d__Bacteria	 k__norank	 p__Proteobacteria	 c__Alphaproteobacteria	 o__Elsterales	 f__uncultured	 g__uncultured	 s__uncultured_bacterium	18.42857143	4ef5af3746dc7a02412ec0fc9396e6ba
