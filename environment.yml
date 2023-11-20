@@ -1,0 +1,17 @@
+# python-package-conda.yml
+# This is a YAML file for defining the dependencies and metadata of a Python code
+# You can use this file to create and share a conda environment
+# To create a conda environment from this file, run: conda env create -f python-package-conda.yml
+
+name: zipi # The name of the conda environment
+channels: # The channels to search for packages
+  - defaults
+  - conda-forge
+dependencies: # The list of packages to install
+  - python=3.9 # The Python version
+  - pandas # A package for handling data frames and file input and output
+  - networkx # A package for building and analyzing network graphs
+  - matplotlib # A package for drawing Zipi plots and other visualizations
+  - numpy # A package for mathematical and statistical calculations
+  - tkinter # A package for creating graphical user interface
+  - community # A package for community partitioning algorithm
