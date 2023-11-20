@@ -18,7 +18,7 @@ jobs: # The list of jobs to run in parallel
     - name: Set up Python 3.10 # A custom name for the step
       uses: actions/setup-python@v3 # A predefined action to set up Python
       with: # The parameters for the action
-        python-version: '3.11.4' # The Python version to use
+        python-version: '3.11' # The Python version to use
     - name: Add conda to system path # A custom name for the step
       run: | # The commands to run in the step
         # $CONDA is an environment variable pointing to the root of the miniconda directory
