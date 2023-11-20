@@ -27,3 +27,33 @@ numpy: 用于进行数学和统计的计算。
 tkinter: 用于创建图形用户界面。
 community: 用于进行社区划分的算法。
 您可以使用pip或conda等工具来安装这些包，或者使用已经包含这些包的Python发行版，例如Anaconda。
+
+Zipi Plot Drawing Tool
+This is a tool written in Python, used to draw Zipi plots of networks based on the Zi and Pi values of the nodes, and output the roles and other information of the nodes. Zipi plot is a visualization method for analyzing network structure and node roles, which can divide nodes into different regions according to their degree of connectivity within and between communities, reflecting the different roles of nodes. For example, module hubs, module connectors, network hubs, peripherals, etc.
+
+Features
+This tool can achieve the following features:
+
+Read edge file and node file, build network graph, and use Louvain algorithm for community partitioning.
+Calculate the Zi and Pi values of each node, as well as the community, degree, role, label and other information of each node, and store them in a data frame.
+Draw Zipi plot, according to the Zi and Pi values of the nodes, divide the nodes into four or seven regions, use different colors to indicate different roles, and save the Zipi plot as a png format image.
+Output data frame, output the information of each node to a txt file, for easy viewing and analysis.
+Usage
+To use this tool, you need to follow the following steps:
+
+Run zipi.py file, this will pop up a window, prompting you to select the path of the edge file, node file and output folder.
+Select edge file, this is a txt format file, each line represents an edge, consisting of two node labels and a weight, separated by spaces. For example, A B 1 means that there is an edge with a weight of 1 between node A and node B.
+Select node file, this is a txt format file, each line represents a node, consisting of a node label and a label, separated by spaces. For example, A apple means that the label of node A is apple.
+Select output folder, this is a folder path, used to store the output Zipi plot and data frame. For example, C:\Users\user\Desktop\output means that the output folder is the output folder on the desktop.
+Click the run button, this will start executing the code, building the network graph, calculating the node information, drawing the Zipi plot, outputting the data frame. This may take some time, depending on the size and complexity of your network.
+Wait for the run to complete, this will display a message on the window, telling you whether the run was successful, and the output file path. You can view the Zipi plot and data frame in the output folder, or use other tools for further analysis.
+Dependencies
+To run this tool, you need to install the following Python packages:
+
+pandas: for handling data frames and file input and output.
+networkx: for building and analyzing network graphs.
+matplotlib: for drawing Zipi plots and other visualizations.
+numpy: for mathematical and statistical calculations.
+tkinter: for creating graphical user interface.
+community: for community partitioning algorithm.
+You can use tools like pip or conda to install these packages, or use a Python distribution that already contains these packages, such as Anaconda.
