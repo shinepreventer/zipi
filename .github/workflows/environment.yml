@@ -4,9 +4,10 @@
 # To create a conda environment from this file, run: conda env create -f python-package-conda.yml
 
 name: zipi # The name of the conda environment
-channels: # The channels to search for packages
-  - defaults
+channels:
   - conda-forge
+  - anaconda
+  - defaults
 dependencies: # The list of packages to install
   - python=3.9 # The Python version
   - pandas # A package for handling data frames and file input and output
