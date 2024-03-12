@@ -31,7 +31,7 @@
 - matplotlib: 用于绘制Zipi图和其他的可视化。
 - numpy: 用于进行数学和统计的计算。
 - tkinter: 用于创建图形用户界面。
-- community: 用于进行社区划分的算法。
+- python-louvain: 用于进行社区划分的算法。
 
 您可以使用pip或conda等工具来安装这些包，或者使用已经包含这些包的Python发行版，例如Anaconda。
 
